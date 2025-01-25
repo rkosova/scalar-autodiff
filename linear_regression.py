@@ -1,6 +1,6 @@
 import random
-from symbolicdiff import Node
-from symbolicdiff.optimizers import GradientDescent
+from autodiff import Node
+from autodiff.optimizers import GradientDescent
 import numpy as np
 import matplotlib.pyplot as plt
 
