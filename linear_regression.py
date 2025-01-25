@@ -23,8 +23,8 @@ for _ in range(5):
 
 pred_x = np.array([(w * x[i] + b).value for i in range(x.shape[0])])
 
-plt.scatter(x, data, label='data')
-plt.plot(x, pred_x, label='prediction')
+plt.scatter(x, data, label=f'data ${true_w:.2f}x + {true_b:.2f} + \epsilon$')
+plt.plot(x, pred_x, label=f'prediction ${w.value:.2f}x + {b.value:.2f}$')
 plt.legend()
 plt.show()
 print(f"w={w.value}, b={b.value}")
