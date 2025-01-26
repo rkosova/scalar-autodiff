@@ -23,11 +23,9 @@ A node $v\in V$ is connected to $u\in V$ with some edge $e\in E$ if $v$ is an op
 
 #### Backward Process
 
-Given $y = wx + b$, the nodes of the graph $G=\{x, w, b, y\}$. Each node $v$ than has its parent set $P_v$. If we call `backward` from $y$ we tell the engine that we want to compute its gradient vector w.r.t. every other (preceding) node in the graph.
+Given $y = wx + b$, the nodes of the graph $G=\\{x, w, b, y\\}$. Each node $v$ than has its parent set $P_v$. If we call `backward` from $y$ we tell the engine that we want to compute its gradient vector w.r.t. every other (preceding) node in the graph.
 
-$
-\nabla y = \left[ \frac{\partial y}{\partial x}, \frac{\partial y}{\partial w}, \frac{\partial y}{\partial b} \right]^\top
-$
+$$\nabla y = \left[ \frac{\partial y}{\partial x}, \frac{\partial y}{\partial w}, \frac{\partial y}{\partial b} \right]^\top$$
 
 To acomplish this, the engine makes use of the **chain rule**, where $\frac{d(f(g(x)))}{dx} = \frac{df(g(x))}{dg(x)} \cdot \frac{dg(x)}{dx}$. The engine combines this rule with the computation graph to compute the gradient of the leaf node $y$.
 
